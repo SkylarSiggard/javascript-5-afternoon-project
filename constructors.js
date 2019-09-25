@@ -66,20 +66,11 @@ function Car(make, model, year) {
   this.make = make
   this.model = model
   this.year = year
-  this.moveCar = function() {
-    let start = 0
-      return {
-        inc: function(){
-          start += 10
-          return start
-        },
-        dec: function(){
-          start -= 10
-          return start
-        }
-      }
+  this.moveCar = function(){
+    return this.move += 10
   }
 }
+
 
 
 ////////// PROBLEM 4 //////////
