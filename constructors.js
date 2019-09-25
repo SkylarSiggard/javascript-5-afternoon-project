@@ -137,7 +137,10 @@ User.prototype.addSavedPost = function(id, title, rating) {
 // Use this id to find and remove the matching object in the savedPosts array.
 
 // Code here
-
+User.prototype.removeSavedPost = function(id) {
+  let index = this.savedPosts.findIndex(el => el.id === +id)
+  return this.savedPosts.splice(index, 1)
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -147,3 +150,8 @@ User.prototype.addSavedPost = function(id, title, rating) {
 //Once you find the matching object, update it's rating score with the new rating parameter.
 
 // Code here
+User.changeRating.changeRating = function(id, num) {
+  let index = this.savedPosts.findIndex(el => el.id === +id)
+  
+
+}
